@@ -9,6 +9,11 @@ Class {
 }
 
 { #category : #accessing }
+EBinaryExpression >> accept: aVisitor [
+	^self subclassResponsibility
+]
+
+{ #category : #accessing }
 EBinaryExpression >> left [
 	^left
 ]

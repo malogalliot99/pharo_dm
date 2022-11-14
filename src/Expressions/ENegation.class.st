@@ -12,6 +12,16 @@ ENegation class >> expression: anExpression [
 	^self new expression: anExpression
 ]
 
+{ #category : #'instance creation' }
+ENegation class >> negative5 [
+	^self new expression: EConstant constant5.
+]
+
+{ #category : #accessing }
+ENegation >> accept: aVisitor [
+	^aVisitor visitNegation: self
+]
+
 { #category : #accessing }
 ENegation >> evaluateWith: anObject [
 	^(expression evaluateWith: anObject) *(-1)

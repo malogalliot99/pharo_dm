@@ -23,6 +23,11 @@ EConstant class >> value: aValue [
 ]
 
 { #category : #'public access' }
+EConstant >> accept: aVisitor [
+	^aVisitor visitConstant: self
+]
+
+{ #category : #'public access' }
 EConstant >> evaluateWith: anObject [
 	^value
 ]

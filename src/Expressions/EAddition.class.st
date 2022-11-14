@@ -15,6 +15,11 @@ EAddition class >> left: ep1 right: ep2 [
 ]
 
 { #category : #accessing }
+EAddition >> accept: aVisitor [
+	^aVisitor visitAddition: self
+]
+
+{ #category : #accessing }
 EAddition >> evaluateWith: anObject [
 	^(left evaluateWith: anObject) + (right evaluateWith: anObject)
 ]

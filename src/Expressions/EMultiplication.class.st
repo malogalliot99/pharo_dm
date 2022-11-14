@@ -15,6 +15,11 @@ EMultiplication class >> left: ep1 right: ep2 [
 ]
 
 { #category : #accessing }
+EMultiplication >> accept: aVisitor [
+	^aVisitor visitMultiplication: self
+]
+
+{ #category : #accessing }
 EMultiplication >> evaluateWith: anObject [
 	^(left evaluateWith: anObject) * (right evaluateWith: anObject)
 ]

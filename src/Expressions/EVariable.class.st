@@ -8,6 +8,11 @@ Class {
 }
 
 { #category : #accessing }
+EVariable >> accept: aVisitor [
+	^self subclassResponsibility
+]
+
+{ #category : #accessing }
 EVariable >> evaluateWith: aBindingDictionnary [
 	^aBindingDictionnary at: id
 ]
