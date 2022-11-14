@@ -16,7 +16,7 @@ EMultiplication class >> left: ep1 right: ep2 [
 
 { #category : #accessing }
 EMultiplication >> evaluateWith: anObject [
-	^(left evaluateWith: Dictionary new) * (right evaluateWith: Dictionary new)
+	^(left evaluateWith: anObject) * (right evaluateWith: anObject)
 ]
 
 { #category : #accessing }

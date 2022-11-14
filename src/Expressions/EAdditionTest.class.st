@@ -23,17 +23,17 @@ EAdditionTest >> testDeclarationWithClass [
 
 { #category : #tests }
 EAdditionTest >> testEvaluate [
-	self assert: (EAddition fivePlusThree) evaluate equals: 8
+	self assert: ((EAddition fivePlusThree) evaluateWith: Dictionary new) equals: 8
 ]
 
 { #category : #tests }
 EAdditionTest >> testFivePlusThree [
-	self assert: EAddition fivePlusThree evaluate equals:8
+	self assert: (EAddition fivePlusThree evaluateWith: Dictionary new) equals:8
 ]
 
 { #category : #tests }
 EAdditionTest >> testNegated [
-	self assert: EAddition fivePlusThree negated evaluate equals:-8.
+	self assert: (EAddition fivePlusThree negated evaluateWith: Dictionary new) equals:-8.
 ]
 
 { #category : #tests }

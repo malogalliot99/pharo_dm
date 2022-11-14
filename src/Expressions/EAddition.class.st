@@ -15,8 +15,8 @@ EAddition class >> left: ep1 right: ep2 [
 ]
 
 { #category : #accessing }
-EAddition >> evaluatewith: anObject [
-	^(left evaluateWith: Dictionary new) + (right evaluateWith: Dictionary new)
+EAddition >> evaluateWith: anObject [
+	^(left evaluateWith: anObject) + (right evaluateWith: anObject)
 ]
 
 { #category : #accessing }
